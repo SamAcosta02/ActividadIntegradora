@@ -5,7 +5,8 @@ El problema a resolver es poder generar una simulacion de la propagación de un 
 
 ## Descripcion de los agentes y modelos
 
-### Agentes
+### **Agentes**
+<br/>
 En este caso solo existe un agente, que representa un humano en esta situación. Este humano representado por una celda puede estar Viva y Sana (color Verde), Viva e infectada (color Morado) o Muerta (color rojo).
 
 #### Acciones
@@ -23,7 +24,8 @@ En este caso como el sistema que queremos modelar es la propagación de un virus
 * Si la celda esta viva e infectada y le rodean mas de 2 personas (vecinos) que tambien estan infectadas, esta celda se **muere (accion)**, es decir cambia su estado de viva-infectada a muerta. morada -> roja.
 * Si la celda esta muerta pero existen 3 personas o mas (vecinos), esta puede **nacer (acción)**. Pasa su estado de muerta a viva-sana, rojo->verde.
 
-### El entorno
+### **El entorno**
+<br/>
 El entorno o modelo en este caso estan puestos en un tablero/matriz. Cada uno de los espacios de este modelo representan una persona (agente) y no existen espacios vacíos, o espacios donde no exista un agente con un estado.
 <br>
 Al inicio de la simulacion, se colocan las personas(agentes) con estados aleatorios, lo cual es indicativo en una propagacion de un virus, por ejemplo en un aeropuerto, que no se sabe con certeza la cantidad de infectados que puede haber. Cada step (o en otras palabras fraccion de tiempo de la simulacion) los agentes perciben y actuan para actualizar su estado con las reglas descritas anteriormente.
