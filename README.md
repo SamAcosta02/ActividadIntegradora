@@ -17,8 +17,10 @@ Claro nada de esto puede hacer sin antes percibir su entorno, lo cual al final d
 
 #### Percepciones
 En este caso como el sistema que queremos modelar es la propagación de un virus que puedes obtener por lo que te rodea, las percepciones del agente se basan en recorrer cada uno de sus vecinos para saber que hacer.
-* Si la celda esta en estado vivo y sano (verde) y mas de 3 personas (o vecinos incluyendo diagonales), esta celda se infecta y por lo tanto puede **infectar (accion)** a otros si se cumple esta condicion en otra parte.
-* Si Celda esta viva e infectada 
+<br>
+* Si la celda esta en estado vivo y sano (verde) y mas de 3 personas (o vecinos incluyendo diagonales), esta celda se infecta y por lo tanto puede **infectar (accion)** a otros si se cumple esta condicion en otra parte. cambia su estado de viva-sana a viva-infectada verde->morado.
+* Si la celda esta viva e infectada y le rodean mas de 2 personas (vecinos) que tambien estan infectadas, esta celda se **muere (accion)**, es decir cambia su estado de viva-infectada a muerta. morada -> roja.
+* Si la celda esta muerta pero existen 3 personas o mas (vecinos), esta puede **nacer (acción)**. Pasa su estado de muerta a viva-sana, rojo->verde.
 
 ### El entorno
 El entorno o modelo
