@@ -38,14 +38,11 @@ En este modelo no hay tantos parametros, ya que es una simulación simple. Pero 
 *self.width y self.height. Estas variables indican el tamaño del modelo y por ende la cantidad de agentes y la escala de la simulacón que sirven de parametros de entrada a la hora de crear el modelo.
 
 ### Resultados
-Los resultados se presentan por medio de gráficas. Anteriormente vimos como 
+Usando la visualizacion de mesa podemos visualizar la propagación del virus usando grid de mesa y usando colores diferentes para los diferentes estados de los agentes. De esta manera se puede visuzaliar cada step que se realizo en la simulación y ver su comportamiento.
 
-
-e.	Identifica las variables y los parámetros que determinan el funcionamiento del sistema.
-f.	Describe el proceso de simulación
-g.	Discute clara y concisamente los resultados obtenidos
-h.	Agrega el link al repositorio.
-5.	Actualiza el repositorio y verifica que todo lo anterior esté cargado.
-6.	Descarga el repositorio en .ZIP y súbelo a tu portafolio de eLumen.
+Los resultados se presentan por medio de gráficas. Anteriormente vimos como algunas variables almacenaban información sobre los agentes y el modelo. Usando el mesa.datacollection importando DataCollector, podemos fácilmente desplegar la informacion que colectamos en gráficas, que muestran lo sigueinte:
+* Para la simulación visualizada se puede ver una gráfica indicando la cantidad de celdas que estan vivas, muertas, infectadas y sanas representadas por sus colores respectivos: verde, rojo, morado y azul.
+* La gráfica de en medio describe el tiempo promedio que una persona vive antes de morirse.
+* Existe otra grafica que representa el promedio de los números antes mencionados, pero con respecto a muchas simulaciónes llevadas a cabo para conocer su tendencia/comportamiento en promedio.
 
 
