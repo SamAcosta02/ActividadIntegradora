@@ -6,7 +6,6 @@ El problema a resolver es poder generar una simulacion de la propagación de un 
 ## Descripcion de los agentes y modelos
 
 ### **Agentes**
-<br/>
 En este caso solo existe un agente, que representa un humano en esta situación. Este humano representado por una celda puede estar Viva y Sana (color Verde), Viva e infectada (color Morado) o Muerta (color rojo).
 
 #### Acciones
@@ -25,19 +24,21 @@ En este caso como el sistema que queremos modelar es la propagación de un virus
 * Si la celda esta muerta pero existen 3 personas o mas (vecinos), esta puede **nacer (acción)**. Pasa su estado de muerta a viva-sana, rojo->verde.
 
 ### **El entorno**
-<br/>
 El entorno o modelo en este caso estan puestos en un tablero/matriz. Cada uno de los espacios de este modelo representan una persona (agente) y no existen espacios vacíos, o espacios donde no exista un agente con un estado.
 <br>
 Al inicio de la simulacion, se colocan las personas(agentes) con estados aleatorios, lo cual es indicativo en una propagacion de un virus, por ejemplo en un aeropuerto, que no se sabe con certeza la cantidad de infectados que puede haber. Cada step (o en otras palabras fraccion de tiempo de la simulacion) los agentes perciben y actuan para actualizar su estado con las reglas descritas anteriormente.
 
 #### Variables
-Las variables significativas
+En este modelo, existen variables significativas que determinan el funcionamiento del sistema de manera grande.
+*moore = True. Esta variable nos indica que al checar por vecinos, tambien tome en cuenta los diagonales, algo que afecta grandemente si no se toma en cuenta. Si esto fuera en false, la propagacion del virus, seria con menos frecuencia.
+* Existen variables como: total_live_agentes, total_infect_agents y total_die_agents que son variables que existen para contabilizar y realizar un analisis para los resultados. Estos se usan para recolectar datos despues.
 
 #### Parámetros
-Los parametros significativos
+En este modelo no hay tantos parametros, ya que es una simulación simple. Pero si se toma en cuenta en los agentes(personas) un unique_id que se representa por su posición en la matriz para identificarlo.
+*self.width y self.height. Estas variables indican el tamaño del modelo y por ende la cantidad de agentes y la escala de la simulacón que sirven de parametros de entrada a la hora de crear el modelo.
 
 ### Resultados
-Los resultados representan
+Los resultados se presentan por medio de gráficas. Anteriormente vimos como 
 
 
 e.	Identifica las variables y los parámetros que determinan el funcionamiento del sistema.
